@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>ABSoft - Tecnologia</title>
+        <h:outputStylesheet library="css" name="style.css"/>
+    </h:head>
+    <h:body onload="PF('dialogo').show()">
+        <p:dialog header="Login" widgetVar="dialogo" closable="false" resizable="false" 
+                  draggable="false" responsive="true">
+            <h:form id="login">
+                <p:growl id="growl" showDetail="true" sticky="true" />
+
+                <h:panelGrid columns="1">
+                    <p:inputText id="user" placeholder="Usuário" value="#{mbLogin.usuario}" required="true" 
+                                 requiredMessage="Digite o usuário!" size="30"/>
+
+                    <p:password id="pass" placeholder="Senha" value="#{mbLogin.senha}" size="30" 
+                                required="true" requiredMessage="Digite a senha!"/>
+                    <p:commandButton id="btLogin" value="Entrar" action="#{mbLogin.efetuarLogin()}"
+                                     icon="ui-icon-person" update="@form" process="@form"/>
+                </h:panelGrid>
+            </h:form>
+        </p:dialog>
+    </h:body>
+</html>
+
