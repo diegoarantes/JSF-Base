@@ -49,23 +49,10 @@ public abstract class BaseRepository<T extends BaseEntity, PK extends Number> {
         return getEntityManager().createQuery("from " + entityClass.getSimpleName(), entityClass).getResultList();
     }
     
-    public int count() {
-        Query q = getEntityManager().createQuery("from " + entityClass.getSimpleName(), entityClass);
-        return ((Long) q.getSingleResult()).intValue();
+    public Long count() {
+        Query q = getEntityManager().createQuery("select count(c) from " + entityClass.getSimpleName() + " c", Long.class);
+        return (Long) q.getSingleResult();
     }
-
-    /**
-     * @param condicao
-     * @param param
-     * @return Objetos Filtrados pela condição e seus parâmetros
-     */
-//    public List listByQuery(String condicao, ParamQuery param) {
-//        Query q = getEntityManager().createQuery("from " + entityClass.getSimpleName() + " where " + condicao);
-//        for (ParamQuery parametro : param.getParams()) {
-//            q.setParameter(parametro.getParam(), parametro.getObject());
-//        }
-//        return q.getResultList();
-//    }
 
     /**
      * @return retorna uma conexão jdbc
