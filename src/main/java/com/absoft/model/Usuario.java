@@ -1,8 +1,13 @@
 package com.absoft.model;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,9 +24,10 @@ import lombok.EqualsAndHashCode;
  */
 @Entity
 @EqualsAndHashCode(of = "id")
-public @Data class Usuario implements BaseEntity {
+public @Data
+class Usuario implements BaseEntity {
 
-     @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -52,7 +58,8 @@ public @Data class Usuario implements BaseEntity {
     @Temporal(TemporalType.TIMESTAMP)
     private Date horaUltimoLogon;
 
-
-//    @Enumerated(EnumType.STRING)
-//    private List<Permissao> permissoes = new ArrayList<>();
+    @Column(length = 6)
+    @ElementCollection
+    @Enumerated(EnumType.STRING)
+    private List<Permissao> permissoes = new ArrayList<>();
 }
