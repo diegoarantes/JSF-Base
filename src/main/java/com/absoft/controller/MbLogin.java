@@ -3,8 +3,8 @@ package com.absoft.controller;
 import com.absoft.model.Usuario;
 import com.absoft.service.UsuarioService;
 import java.io.Serializable;
+import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
-import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import lombok.Getter;
@@ -15,7 +15,7 @@ import lombok.Setter;
  * @author Diego Arantes
  */
 @Named
-@ViewScoped
+@RequestScoped
 public class MbLogin implements Serializable {
 
     @Inject
