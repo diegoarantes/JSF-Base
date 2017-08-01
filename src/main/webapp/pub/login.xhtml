@@ -27,13 +27,20 @@
         </style>
     </h:head>
     <h:body onload="PF('dialogo').show()">
-        <div id="header">
+<!--        <div id="header">
             <p:graphicImage library="images" name="logo.png"/>
-        </div>
+        </div>-->
 
 
-        <p:dialog header="Login" widgetVar="dialogo" closable="false" resizable="false" 
+        <p:dialog widgetVar="dialogo" closable="false" resizable="false" 
                   draggable="false" responsive="true">
+            <p:graphicImage library="images" name="erp.png"/>
+            <div>
+                <p:outputLabel value="Seja bem-vindo!" style="color:#757575; float:left; padding-top: 17px"/>
+                <i class="fa fa-sign-in fa-4x" aria-hidden="true" style="color: #dee4e9; float:right"></i>
+            </div>
+
+
             <h:form id="login">
                 <p:growl id="growl" showDetail="true" sticky="true" />
 
