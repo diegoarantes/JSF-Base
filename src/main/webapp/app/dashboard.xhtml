@@ -1,115 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <h:head>
-        <title>ABSoft - Dashboard</title>
-        <h:outputStylesheet library="css" name="style.css"/>
-
-        <style>
-            body .ui-menu.ui-menubar > .ui-menu-list > .ui-menuitem > .ui-menuitem-link {
-                color: #FFF;
-                line-height: 25px;
-            }
-
-            body .ui-menu.ui-megamenu > .ui-menu-list > .ui-menuitem > .ui-menuitem-link .ui-icon:last-child {
-                float: none;
-            }
-
-            /*            body .ui-button.ui-button-text-icon-left .ui-button-text {
-                            padding: 14px 8px 12px 26px;
-                        }*/
-
-            .user .ui-button.ui-button-text-icon-left .ui-button-text {
-                padding: 13px 8px 12px 26px !important;
-            }
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./../WEB-INF/template/padrao.xhtml">
+    
+    <ui:define name="content">
+        <h1>Dashboard</h1>
 
 
-            #footer-container {
-                margin: 0px;
-                clear: both;
-                position: fixed;
-                bottom: 0;
-                right: 0;
-                left: 0;
-                height: 25px;
-                display: block;
-                z-index: 50;
-                background-color: #3f3b3c;
-            }
+    </ui:define>
 
-           
-        </style>
-    </h:head>
-    <h:body>
-        <h:form>
-
-            <p:megaMenu autoDisplay="false" orientation="horizontal" style="background-color: #3F3D3D; height: 40px; box-shadow: 1px 0.5px 8px #888888; border-bottom: 3.5px solid #3984b8; margin: -9px;">
-                <p:menuitem value="Home" icon="fa fa-home" outcome="dashboard"/>
-                <p:submenu label="Cadastros" icon="ui-icon-check">
-                    <p:column>
-                        <p:submenu label="Pessoas">
-                            <p:menuitem value="Cliente / Fornecedor" url="#" />
-                            <p:menuitem value="TV.1.2" url="#" />
-                        </p:submenu>
-                        <p:submenu label="TV.2">
-                            <p:menuitem value="TV.2.1" url="#" />
-                            <p:menuitem value="TV.2.2" url="#" />
-                            <p:menuitem value="TV.2.3" url="#" />
-                        </p:submenu>
-                    </p:column>
-                </p:submenu>
-
-                <f:facet name="options">
-                    <p:menuButton value="#{mbLogin.usuarioLogado().nome}" class="user">
-                        <p:menuitem value="Meu Perfil" icon="fa fa-address-card-o"/>
-                        <p:menuitem value="Sair" action="#{mbLogin.efetuarLogout()}" ajax="false" icon="fa fa-sign-out"/>
-                    </p:menuButton>
-                </f:facet>
-            </p:megaMenu>
-        </h:form>
-        
-        
-        <h:panelGrid columns="1">
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-            <p:inputText />
-        </h:panelGrid>
-        
-
-        <footer id="footer-container">
-            <div style="float:left; margin-left: 10px; margin-top: 4px; color: #FFF">
-                Teste
-            </div>
-            <div style="float: right; margin-right: 10px; margin-top: 4px; color: #FFF">
-                Versão 1.0
-            </div>
-        </footer>
-
-    </h:body>
-</html>
-
+</ui:composition>
