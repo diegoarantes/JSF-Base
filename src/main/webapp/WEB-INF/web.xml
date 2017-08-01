@@ -48,7 +48,7 @@
     <!-- Configurações do tema do PrimeFaces -->
     <context-param>
         <param-name>primefaces.THEME</param-name>
-        <param-value>omega</param-value>
+        <param-value>paradise-blue</param-value>
     </context-param>
     
     <!--Mine Types -->

@@ -38,13 +38,13 @@
             <type>jar</type>
         </dependency>
         
-        <!--  Ultima Theme (Tema para Primefaces) -->
-<!--        <dependency>
+        <!--  Paradise Theme (Tema para Primefaces) -->
+        <dependency>
             <groupId>org.primefaces</groupId>
-            <artifactId>ultima-theme</artifactId>
-            <version>1.0.6</version>
+            <artifactId>paradise-theme</artifactId>
+            <version>1.0.0</version>
             <type>jar</type>
-        </dependency>-->
+        </dependency>
         
         <!-- PrettyFaces -->
         <dependency>
