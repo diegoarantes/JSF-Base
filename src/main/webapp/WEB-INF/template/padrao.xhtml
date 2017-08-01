@@ -2,57 +2,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
 
     <h:head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>ABSoft - Dashboard</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>ABSoft ERP</title>
         <h:outputStylesheet library="css" name="style.css"/>
+        <link rel="shortcut icon" type="image/png" href="#{request.contextPath}/resources/images/favicon.png"/>
     </h:head>
 
     <h:body>
-        <h:form>
-            <p:megaMenu autoDisplay="false" orientation="horizontal" class="menu">
-                <p:menuitem value="Home" icon="fa fa-home" outcome="dashboard"/>
-                <p:submenu label="Cadastros" icon="fa fa-id-card">
-                    <p:column>
-                        <p:submenu label="Pessoas">
-                            <p:menuitem value="Cliente / Fornecedor" url="#" />
-                            <p:menuitem value="TV.1.2" url="#" />
-                        </p:submenu> 
-                        <p:submenu label="TV.2">
-                            <p:menuitem value="TV.2.1" url="#" />
-                            <p:menuitem value="TV.2.2" url="#" />
-                            <p:menuitem value="TV.2.3" url="#" />
-                        </p:submenu>
-                    </p:column>
-                </p:submenu>
-                <p:submenu label="Suprimentos" icon="fa fa-cubes">
-
-                </p:submenu>
-                <p:submenu label="Vendas" icon="fa fa-shopping-cart">
-
-                </p:submenu>
-                <p:submenu label="Faturamento" icon="fa fa-barcode">
-
-                </p:submenu>
-                <p:submenu label="Finanças" icon="fa fa-usd">
-
-                </p:submenu>
-               
-                <p:submenu label="Ajuda" icon="fa fa-life-ring">
-
-                </p:submenu>
-                <f:facet name="options">
-                    <p:menuButton value="#{mbLogin.usuarioLogado().nome}" class="user">
-                        <p:menuitem value="Meu Perfil" icon="fa fa-address-card-o"/>
-                        <p:menuitem value="Sair" action="#{mbLogin.efetuarLogout()}" ajax="false" icon="fa fa-sign-out"/>
-                    </p:menuButton>
-                </f:facet>
-            </p:megaMenu>
-        </h:form>
+        <ui:include src="menu.xhtml" />
 
         <section class="content">
             <ui:insert name="content">Content</ui:insert>
@@ -67,5 +28,4 @@
             </div>
         </footer>
     </h:body>
-
 </html>

@@ -4,10 +4,34 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>ABSoft - Tecnologia</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>ABSoft ERP - Login</title>
         <h:outputStylesheet library="css" name="style.css"/>
+        <link rel="shortcut icon" type="image/png" href="#{request.contextPath}/resources/images/favicon.png"/>
+        <style>
+            #header{
+                background-color: #3F3D3D; 
+                height: 40px;
+                box-shadow: 1px 0.5px 8px #888888 !important;
+                overflow: hidden;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+            }
+            #header img{
+                padding: 2px;
+                padding-left: 18px;
+            }
+        </style>
     </h:head>
     <h:body onload="PF('dialogo').show()">
+        <div id="header">
+            <p:graphicImage library="images" name="logo.png"/>
+        </div>
+
+
         <p:dialog header="Login" widgetVar="dialogo" closable="false" resizable="false" 
                   draggable="false" responsive="true">
             <h:form id="login">
@@ -28,6 +52,15 @@
                 </h:panelGrid>
             </h:form>
         </p:dialog>
+
+        <footer id="footer-container">
+            <div style="float:left;" class="footer">
+                ABSoft - Tecnologia
+            </div>
+            <div style="float: right;" class="footer">
+                Versão 1.0
+            </div>
+        </footer>
     </h:body>
 </html>
 

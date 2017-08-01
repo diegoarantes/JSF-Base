@@ -1,0 +1,46 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:form>
+        <p:megaMenu autoDisplay="false" orientation="horizontal" class="menu">
+            <p:menuitem value="Home" icon="fa fa-home" outcome="dashboard"/>
+            <p:submenu label="Cadastros" icon="fa fa-id-card">
+                <p:column>
+                    <p:submenu label="Pessoas">
+                        <p:menuitem value="Cliente / Fornecedor" url="#" />
+                        <p:menuitem value="TV.1.2" url="#" />
+                    </p:submenu> 
+                    <p:submenu label="TV.2">
+                        <p:menuitem value="TV.2.1" url="#" />
+                        <p:menuitem value="TV.2.2" url="#" />
+                        <p:menuitem value="TV.2.3" url="#" />
+                    </p:submenu>
+                </p:column>
+            </p:submenu>
+            <p:submenu label="Suprimentos" icon="fa fa-cubes">
+
+            </p:submenu>
+            <p:submenu label="Vendas" icon="fa fa-shopping-cart">
+
+            </p:submenu>
+            <p:submenu label="Faturamento" icon="fa fa-barcode">
+
+            </p:submenu>
+            <p:submenu label="Finanças" icon="fa fa-usd">
+
+            </p:submenu>
+
+            <p:submenu label="Ajuda" icon="fa fa-life-ring">
+
+            </p:submenu>
+            <f:facet name="options">
+                <p:menuButton value="#{mbLogin.usuarioLogado().nome}" class="user">
+                    <p:menuitem value="Meu Perfil" icon="fa fa-address-card-o"/>
+                    <p:menuitem value="Sair" action="#{mbLogin.efetuarLogout()}" ajax="false" icon="fa fa-sign-out"/>
+                </p:menuButton>
+            </f:facet>
+        </p:megaMenu>
+    </h:form>
+</ui:composition>
