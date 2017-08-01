@@ -19,8 +19,12 @@
 
                     <p:password id="pass" placeholder="Senha" value="#{mbLogin.senha}" size="30" 
                                 required="true" requiredMessage="Digite a senha!"/>
-                    <p:commandButton id="btLogin" value="Entrar" action="#{mbLogin.efetuarLogin()}"
-                                     icon="ui-icon-person" update="@form" process="@form"/>
+                    <p:column>
+                        <p:commandButton id="btLogin" value="Entrar" action="#{mbLogin.efetuarLogin()}"
+                                         icon="ui-icon-person" update="@form" process="@form"/>
+                        <p:link value="Esqueceu a senha?" style="margin-left: 60px"/>
+                    </p:column>
+
                 </h:panelGrid>
             </h:form>
         </p:dialog>
