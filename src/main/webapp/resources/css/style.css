@@ -66,3 +66,8 @@ body .ui-menu.ui-megamenu > .ui-menu-list > .ui-menuitem > .ui-menuitem-link .ui
     font-size: 13px;
 }
 
+.atalhos i{
+    border: 1px solid !important; 
+    padding: 20px;
+    color: #757575;
+}
