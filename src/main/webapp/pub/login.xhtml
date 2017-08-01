@@ -10,6 +10,9 @@
         <h:outputStylesheet library="css" name="style.css"/>
         <link rel="shortcut icon" type="image/png" href="#{request.contextPath}/resources/images/favicon.png"/>
         <style>
+            .ui-widget{
+                font-size: 14px;
+            }
             #header{
                 background-color: #3F3D3D; 
                 height: 40px;
@@ -27,9 +30,9 @@
         </style>
     </h:head>
     <h:body onload="PF('dialogo').show()">
-<!--        <div id="header">
-            <p:graphicImage library="images" name="logo.png"/>
-        </div>-->
+        <!--        <div id="header">
+                    <p:graphicImage library="images" name="logo.png"/>
+                </div>-->
 
 
         <p:dialog widgetVar="dialogo" closable="false" resizable="false" 
@@ -46,14 +49,14 @@
 
                 <h:panelGrid columns="1">
                     <p:inputText id="user" placeholder="Usuário" value="#{mbLogin.usuario}" required="true" 
-                                 requiredMessage="Digite o usuário!" size="30"/>
-
-                    <p:password id="pass" placeholder="Senha" value="#{mbLogin.senha}" size="30" 
+                                 requiredMessage="Digite o usuário!" size="32"/>
+                    <p:password id="pass" placeholder="Senha" value="#{mbLogin.senha}" size="32" 
                                 required="true" requiredMessage="Digite a senha!"/>
                     <p:column>
                         <p:commandButton id="btLogin" value="Entrar" action="#{mbLogin.efetuarLogin()}"
-                                         icon="ui-icon-person" update="@form" process="@form"/>
-                        <p:link value="Esqueceu a senha?" style="margin-left: 60px"/>
+                                         icon="ui-icon-person" update="@form" process="@form" style="width: 48%"/>
+                        <p:link value="Esqueceu a senha?" style="margin-left: 35px; font-size: 11px"/>
+                        <!--                        <p:link value="Esqueceu a senha?" style="margin-left: 60px"/>-->
                     </p:column>
 
                 </h:panelGrid>
